@@ -7,8 +7,9 @@ namespace Algorithms
         static void Main(string[] args)
         {
 
-            var arr = new int[] { 2, 1, 5 };
-            SelectionSort.Sort(arr, (x, y) => x > y);
+            var arr = new[] { 2, 1, 5, 0 };
+          //  SelectionSort.Sort(arr, (x, y) => x > y);
+            InsertionSort.Sort(arr, (x, y) => x > y);
         }
     }
 }
