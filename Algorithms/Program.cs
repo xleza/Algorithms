@@ -6,10 +6,10 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-
-            var arr = new[] { 2, 1, 5, 0 };
-          //  SelectionSort.Sort(arr, (x, y) => x > y);
-            InsertionSort.Sort(arr, (x, y) => x > y);
+            //var arr = new[] { 3, 2, 7, -1 };
+            //MergeSort<int>.Sort(arr, (x, y) => x > y);
+            //SelectionSort.Sort(arr, (x, y) => x > y);
+            //InsertionSort.Sort(arr, (x, y) => x > y);
         }
     }
 }
