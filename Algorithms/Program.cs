@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Algorithms
 {
@@ -6,10 +7,8 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            //var arr = new[] { 3, 2, 7, -1 };
-            //MergeSort<int>.Sort(arr, (x, y) => x > y);
-            //SelectionSort.Sort(arr, (x, y) => x > y);
-            //InsertionSort.Sort(arr, (x, y) => x > y);
+            var binary = 2.ToBinary();
+            BinaryMaxGap.Execute(9);
         }
     }
 }
