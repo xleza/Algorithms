@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public sealed class BirthdayChocolate
     {
-        public static int Execute(List<int> s, int d, int m)
+        public static int GetResult(List<int> s, int d, int m)
         {
             var sum = 0;
             for (var i = 0; i < m; i++)

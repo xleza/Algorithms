@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class OddOccurrencesInArray
     {
-        public static int Execute(int[] arr)
+        public static int GetResult(int[] arr)
         {
             Array.Sort(arr);
             for (var i = 0; i < arr.Length - 1; i += 2)

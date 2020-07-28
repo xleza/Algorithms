@@ -2,7 +2,7 @@
 {
     public static class PermMissingElem
     {
-        public static int Execute(int[] arr)
+        public static int GetResult(int[] arr)
         {
             var aux = new int[arr.Length + 1];
             foreach (var item in arr)

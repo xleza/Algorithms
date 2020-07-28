@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public sealed class PermutationCheck
     {
-        public int Execute(int[] arr)
+        public int GetResult(int[] arr)
         {
             var aux = new int[arr.Length];
             foreach (var item in arr)

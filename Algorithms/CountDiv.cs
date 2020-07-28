@@ -2,7 +2,7 @@
 {
     public static class CountDiv
     {
-        public static int Execute(int fromRange, int toRange, int divisor)
+        public static int GetResult(int fromRange, int toRange, int divisor)
         {
             var offset = 0;
             if (fromRange % divisor == 0)
