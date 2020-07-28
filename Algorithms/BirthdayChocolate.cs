@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace Algorithms
 {
@@ -7,17 +6,20 @@ namespace Algorithms
     {
         public static int Execute(List<int> s, int d, int m)
         {
-            if (s.Count == m)
-                return s.Sum() == d ? 1 : 0;
-
-            var result = 0;
-            for (var i = 0; i < s.Count - m + 1; i++)
+            var sum = 0;
+            for (var i = 0; i < m; i++)
             {
-                var sum = s[i];
-                for (var j = 0; j < m - 1; j++)
-                {
-                    sum += s[i + 1 + j];
-                }
+                sum += s[i];
+            }
+
+            var result = sum == d ? 1 : 0;
+
+            if (s.Count == m)
+                return result;
+
+            for (var i = 0; i + m < s.Count; i++)
+            {
+                sum = sum - s[i] + s[m + i];
                 if (sum == d)
                     result++;
             }
