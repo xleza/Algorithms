@@ -13,35 +13,19 @@ namespace Algorithms
 
         private static string CalculateByGregorian(int year)
         {
-            var days = year == 1918 ? -13 : 0;
+            var daysToAdd = year == 1918 ? -13 : 0;
             var isLeap = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+            if (isLeap)
+                daysToAdd++;
 
-            var i = 1;
-            for (; days < 256; i++)
-            {
-                var nextMonthDays = GetDaysByMonth(i, isLeap);
-                if (days + nextMonthDays > 256)
-                    break;
-                days += nextMonthDays;
-            }
-
-            return GetFormattedDate(year, i, 256 - days);
+            return GetFormattedDate(year, 9, 256 - 243 - daysToAdd);
         }
 
         private static string CalculateByJulian(int year)
         {
             var isLeap = year % 4 == 0;
-            var days = 0;
-            var i = 1;
-            for (; days < 256; i++)
-            {
-                var nextMonthDays = GetDaysByMonth(i, isLeap);
-                if (days + nextMonthDays > 256)
-                    break;
-                days += nextMonthDays;
-            }
 
-            return GetFormattedDate(year, i, 256 - days);
+            return GetFormattedDate(year, 9, 256 - 243 - (isLeap ? 1 : 0));
         }
 
         private static string GetFormattedDate(int year, int month, int day)
