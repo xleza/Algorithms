@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class NumberOfDiscIntersections
     {
-        private static int GetResult(int[] arr)
+        private static int Execute(int[] arr)
         {
             var openEndPoints = new long[arr.Length];
             var closeEndPoints = new long[arr.Length];

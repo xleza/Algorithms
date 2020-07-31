@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class BinaryMaxGap
     {
-        public static int GetResult(int n)
+        public static int Execute(int n)
         {
             var binary = Convert.ToString(n, 2);
             var maxGap = 0;

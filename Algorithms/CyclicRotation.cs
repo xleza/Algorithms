@@ -2,7 +2,7 @@
 {
     public static class CyclicRotation
     {
-        public static T[] GetResult<T>(T[] arr, int rotationsCount)
+        public static T[] Execute<T>(T[] arr, int rotationsCount)
         {
             var result = new T[arr.Length];
             for (var i = 0; i < arr.Length; i++)

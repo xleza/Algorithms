@@ -2,7 +2,7 @@
 {
     public static class FrogRiverOne
     {
-        public static int GetResult(int x, int[] arr)
+        public static int Execute(int x, int[] arr)
         {
             var count = 0;
             var aux = new int[arr.Length];

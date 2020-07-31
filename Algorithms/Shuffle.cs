@@ -5,7 +5,7 @@ namespace Algorithms
 {
     public static class Shuffle
     {
-        private static void GetResult<T>(IList<T> collection)
+        private static void Execute<T>(IList<T> collection)
         {
             var random = new Random();
             for (var i = 0; i < collection.Count; i++)

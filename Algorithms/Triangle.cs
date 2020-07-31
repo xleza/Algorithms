@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class Triangle
     {
-        public static int GetResult(int[] arr)
+        public static int Execute(int[] arr)
         {
             Array.Sort(arr);
 

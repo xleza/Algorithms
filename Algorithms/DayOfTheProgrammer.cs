@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class DayOfTheProgrammer
     {
-        public static string GetResult(int year)
+        public static string Execute(int year)
         {
             var gregorian = year >= 1918;
 

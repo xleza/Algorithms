@@ -2,7 +2,7 @@
 {
     public static class PassingCars
     {
-        public static int GetResult(int[] cars)
+        public static int Execute(int[] cars)
         {
             var zeroCount = 0;
             var result = 0;

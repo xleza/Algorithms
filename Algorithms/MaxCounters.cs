@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class MaxCounters
     {
-        public static int[] GetResult(int n, int[] arr)
+        public static int[] Execute(int n, int[] arr)
         {
             var lastMax = 0;
             var max = 0;

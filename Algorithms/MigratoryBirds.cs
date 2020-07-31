@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public sealed class MigratoryBirds
     {
-        public static int GetResult(IEnumerable<int> birds)
+        public static int Execute(IEnumerable<int> birds)
         {
             var maxKind = int.MaxValue;
             var maxKindValue = 0;
