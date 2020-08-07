@@ -2,7 +2,7 @@
 
 namespace Algorithms.Leetcode
 {
-    public static class IsBalanced
+    public static class IsBalancedBinaryTree
     {
         public static bool Execute(TreeNode root)
         {
