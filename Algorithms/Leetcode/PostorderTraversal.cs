@@ -2,7 +2,7 @@
 
 namespace Algorithms.Leetcode
 {
-    public static class PreorderTraversal
+    public static class PostorderTraversal
     {
         public class TreeNode
         {
@@ -25,27 +25,32 @@ namespace Algorithms.Leetcode
             if (root == null)
                 return traversedNodes;
 
-            var visited = new HashSet<TreeNode>();
             var stack = new Stack<TreeNode>();
+            var visitedNodes = new HashSet<TreeNode>();
 
             stack.Push(root);
 
             while (stack.Count != 0)
             {
                 var node = stack.Peek();
-                if (visited.Contains(node))
-                {
-                    stack.Pop();
+                var visited = visitedNodes.Contains(node);
 
-                    if (node.Right != null)
+                if (visited)
+                {
+                    if (node.Right == null || visitedNodes.Contains(node.Right))
+                    {
+                        stack.Pop();
+                        traversedNodes.Add(node.Val);
+                    }
+                    else if (node.Right != null)
+                    {
                         stack.Push(node.Right);
+                    }
 
                     continue;
                 }
 
-                traversedNodes.Add(node.Val);
-                visited.Add(node);
-
+                visitedNodes.Add(node);
                 if (node.Left != null)
                     stack.Push(node.Left);
             }
