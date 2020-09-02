@@ -13,14 +13,11 @@ namespace Algorithms.Leetcode
 
         }
 
-        public TreeNode Execute(TreeNode root, TreeNode p, TreeNode q)
+        public static TreeNode Execute(TreeNode root, TreeNode p, TreeNode q)
         {
             var stack = new Stack<TreeNode>();
             var visited = new HashSet<TreeNode>();
             stack.Push(root);
-
-            var foundedLeft = false;
-            var foundedRight = false;
 
             while (stack.Count != 0)
             {
